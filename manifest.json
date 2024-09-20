@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Real Time Clock Extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
+
+

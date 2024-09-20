@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Tab</title>
+    <style>
+        :root {
+        /* CSS HEX */
+        --dark-purple: #321325ff;
+        --tyrian-purple: #5f0f40ff;
+        --carmine: #9a031eff;
+        --caramel: #cb793aff;
+        --mustard: #fcdc4dff;
+
+        /* CSS HSL */
+        --dark-purple: rgb(50, 127, 137);
+        --tyrian-purple: rgb(185, 169, 179);
+        --carmine: hsla(349, 96%, 31%, 1);
+        --caramel: hsla(26, 58%, 51%, 1);
+        --mustard: rgb(7, 129, 55);
+      }
+        body {
+            font-family: serif;
+            margin: 20px;
+            /* background-color: rgb(156, 146, 132); */
+            /* background: rgb(130,38,192);background: linear-gradient(90deg, rgba(130,38,192,1) 0%, rgba(144,97,97,1) 50%, rgba(186,129,49,1) 100%); */
+            background: linear-gradient(
+                270deg,
+                var(--carmine),
+                var(--dark-purple),
+                var(--tyrian-purple),
+                var(--caramel),
+                var(--mustard)
+                );
+            background-size: 600% 600%;
+
+            -webkit-animation: AnimationName 25s ease infinite;
+            -moz-animation: AnimationName 25s ease infinite;
+            animation: AnimationName 25s ease infinite;
+        }
+
+            @-webkit-keyframes AnimationName {
+                0%{background-position:0% 43%}
+                50%{background-position:100% 58%}
+                100%{background-position:0% 43%}
+            }
+            @-moz-keyframes AnimationName {
+                0%{background-position:0% 43%}
+                50%{background-position:100% 58%}
+                100%{background-position:0% 43%}
+            }
+            @keyframes AnimationName {
+                0%{background-position:0% 43%}
+                50%{background-position:100% 58%}
+                100%{background-position:0% 43%}
+                    }
+        h1 {
+            text-align: center;
+        }
+        #clock {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Style for the circular clock */
+        /* .clock {
+            width: 200px;
+            height: 200px;
+            border: 10px solid #111111;
+            border-radius: 50%;
+            position: relative;
+            margin: 20px auto;
+        } */
+
+        .clock {
+            width: 220px;
+            height: 220px;
+            border: 10px solid #2f2d2d;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            background: radial-gradient(circle, #010100, #f7ec11);
+        }
+
+
+        /* Style for the clock hands */
+        .hand {
+            position: absolute;
+            background-color: #f9f4f4;
+            transform-origin: bottom;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Styles for specific hands */
+        #hour-hand {
+            width: 4px;
+            height: 50px;
+            top: 50px;
+        }
+
+        #minute-hand {
+            width: 3px;
+            height: 70px;
+            top: 30px;
+            background-color: rgb(90, 228, 97);
+        }
+
+        #second-hand {
+            width: 1px;
+            height: 80px;
+            top: 20px;
+            background-color: red;
+        }
+    #countrySelect {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+        </style>
+  </head>
+  <body>
+      <h1><strong>Real Time Clock</strong></h1>
+      
+      <!-- Circular clock -->
+      <div class="clock">
+          <div class="hand" id="hour-hand"></div>
+          <div class="hand" id="minute-hand"></div>
+          <div class="hand" id="second-hand"></div>
+        </div>
+        
+        <div id="clock">Clock</div>
+    <!-- Country Selection Dropdown -->
+    <select id="countrySelect">
+      <option value="" disabled>Select a country</option>
+    </select>
+    <script src="script.js"></script>
+</body>
+</html>
